@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  background: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+#dot {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  display: none;
+  cursor: pointer;
+  box-shadow: 0 0 20px 5px #ff0000aa;
+  border: 3px solid #fff;
+  z-index: 3;
+  transition: box-shadow 0.2s;
+  touch-action: manipulation;
+}
+@media (max-width: 600px) {
+  #dot {
+    width: 35px;
+    height: 35px;
+  }
+  #score, #instructions, #instructions2 {
+    font-size: 1em;
+    max-width: 95vw;
+  }
+}
+
+
+#score, #instructions, #instructions2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 5;
+  width: 90vw;
+  max-width: 400px;
+  display: block;
+}
+#score { top: 575px; font-size: 1.5em; color: #ffd700; }
+#instructions { top: 610px; color: #ccc; }
+#instructions2 { top: 650px; color: #888; font-size: 0.95em; }
